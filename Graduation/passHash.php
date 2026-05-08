@@ -1,3 +1,2 @@
 <?php
-echo password_hash("123456", PASSWORD_DEFAULT);
-?>
+require __DIR__ . '/app/Presentation/Public/Utilities/passHash.php';

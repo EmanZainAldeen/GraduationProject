@@ -6,7 +6,14 @@
 - `Presentation/Public/Pages`: public pages
 - `Presentation/Public/Story`: story-related public pages
 - `Presentation/Public/Hero`: hero-related public pages
+
+- `Presentation/Public/Auth`: auth and session pages
+- `Presentation/Public/Media`: media viewer pages
+- `Presentation/Public/Dashboard`: public dashboard pages
+- `Presentation/Public/Utilities`: utility/dev scripts
+
 - `Presentation/Public/Auth`: auth HTML pages
+
 
 ## Backward Compatibility
 Legacy root-level files in `Graduation/` now act as compatibility entry points and load the new file location.
