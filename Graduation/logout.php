@@ -1,8 +1,2 @@
 <?php
-session_start();
-$_SESSION = array();
-session_destroy();
-
-header("Location: login.html");
-exit();
-?>
+require __DIR__ . '/app/Presentation/Public/Auth/logout.php';

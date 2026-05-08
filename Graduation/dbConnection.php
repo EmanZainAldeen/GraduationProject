@@ -1,19 +1,13 @@
 <?php
 
-$dbConfig = require __DIR__ . '/../config/database.php';
+declare(strict_types=1);
 
-$host = $dbConfig['host'];
-$user = $dbConfig['user'];
-$passward = $dbConfig['password'];
-$database = $dbConfig['name'];
-$port = (int) $dbConfig['port'];
+use App\Database\DatabaseConnection;
 
-$conn = mysqli_connect($host, $user, $passward, $database, $port);
+require_once __DIR__ . '/../bootstrap/app.php';
 
-if (!$conn) {
-    die('connection failed: ' . mysqli_connect_error());
-}
-
-if (!empty($dbConfig['charset'])) {
-    mysqli_set_charset($conn, $dbConfig['charset']);
+try {
+    $conn = DatabaseConnection::connect();
+} catch (RuntimeException $exception) {
+    die($exception->getMessage());
 }
